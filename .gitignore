@@ -2,12 +2,6 @@
 # Project Specific
 ######################
 
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-!.git/config
-.local.properties
 
 
 ######################
@@ -78,9 +72,6 @@ local.properties
 ######################
 # Maven
 ######################
-/log/**
-/target/**
-.mvn/**
 
 
 ######################
@@ -94,7 +85,6 @@ gradle/**
 ######################
 # Package Files
 ######################
-*.jar
 *.war
 *.ear
 *.db
