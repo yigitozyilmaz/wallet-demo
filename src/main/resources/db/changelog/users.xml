@@ -24,6 +24,12 @@
             <column name="person_count" type="bigint">
                 <constraints  nullable="false"/>
             </column>
+            <column name="vip_status" type="bigint">
+                <constraints  nullable="false"/>
+            </column>
+            <column name="luggage" type="bigint">
+                <constraints  nullable="false"/>
+            </column>
         </createTable>
     </changeSet>
     <changeSet id="20231208-5" author="yigit">

@@ -34,12 +34,20 @@ public class Flight {
     @Column(name = "person_count", nullable = false)
     private Long personCount;
 
+    @Column(name = "vip_status", nullable = false)
+    private Long vip_status;
+
+    @Column(name = "luggage", nullable = false)
+    private Long luggage;
+
     // Constructor with id excluded
-    public Flight(String name, Date flightDate, String departurePort, String arrivalPort, Long personCount) {
+    public Flight(String name, Date flightDate, String departurePort, String arrivalPort, Long personCount, Long vip_status, Long lungage) {
         this.name = name;
         this.flightDate = flightDate;
         this.departurePort = departurePort;
         this.arrivalPort = arrivalPort;
         this.personCount = personCount;
+        this.vip_status = vip_status;
+        this.luggage = lungage;
     }
 }

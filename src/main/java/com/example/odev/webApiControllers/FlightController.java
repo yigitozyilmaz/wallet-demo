@@ -24,7 +24,9 @@ public class FlightController {
                 flightRequest.getFlightDate(),
                 flightRequest.getDeparturePort(),
                 flightRequest.getArrivalPort(),
-                flightRequest.getPersonCount()
+                flightRequest.getPersonCount(),
+                flightRequest.getVip_status(),
+                flightRequest.getLuggage()
         );
         Flight savedFlight = flightService.saveFlight(flight);
         return ResponseEntity.ok(savedFlight);
