@@ -1,5 +1,5 @@
-# Base image olarak resmi bir Java imajını kullanıyoruz
-FROM openjdk:11-jre-slim
+# Base image olarak resmi bir Eclipse Temurin Java 17 imajını kullanıyoruz
+FROM eclipse-temurin:17-jre
 
 # Çalışma dizini oluştur
 WORKDIR /app
