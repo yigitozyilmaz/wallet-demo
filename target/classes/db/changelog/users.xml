@@ -44,10 +44,10 @@
             <column name="description" type="varchar(255)">
                 <constraints nullable="true"/>
             </column>
-            <column name="start_time" type="time">
+            <column name="start_time" type="timestamp">
                 <constraints nullable="false"/>
             </column>
-            <column name="end_time" type="time">
+            <column name="end_time" type="timestamp">
                 <constraints nullable="true"/>
             </column>
             <column name="next_plan_duration" type="int">

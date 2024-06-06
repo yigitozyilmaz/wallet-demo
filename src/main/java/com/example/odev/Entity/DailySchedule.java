@@ -5,8 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalTime;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "daily_schedule", schema = "public")
@@ -29,18 +28,16 @@ public class DailySchedule {
     private String description;
 
     @Column(name = "start_time", nullable = false)
-    @Temporal(TemporalType.TIMESTAMP) // LocalTime yerine Date kullanımı
-    private Date startTime;
+    private LocalDateTime startTime; // LocalDateTime olarak değiştirildi
 
     @Column(name = "end_time")
-    @Temporal(TemporalType.TIMESTAMP) // LocalTime yerine Date kullanımı
-    private Date endTime;
+    private LocalDateTime endTime; // LocalDateTime olarak değiştirildi
 
     @Column(name = "next_plan_duration")
     private Integer nextPlanDuration;
 
     // Constructor with id excluded
-    public DailySchedule(String name, String header, String description, Date startTime, Date endTime, Integer nextPlanDuration) {
+    public DailySchedule(String name, String header, String description, LocalDateTime startTime, LocalDateTime endTime, Integer nextPlanDuration) {
         this.name = name;
         this.header = header;
         this.description = description;
