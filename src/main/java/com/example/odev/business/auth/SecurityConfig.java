@@ -15,7 +15,15 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/api/auth/login", "/api/auth/register", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html", "/api/flights/**").permitAll() // Yeni eklenen servisleri de izinli yap
+                        .requestMatchers(
+                                "/api/auth/login",
+                                "/api/auth/register",
+                                "/v3/api-docs/**",
+                                "/swagger-ui/**",
+                                "/swagger-ui.html",
+                                "/api/flights/**",
+                                "/api/daily-schedules/**" // daily-schedules API'sine de izin verildi
+                        ).permitAll()
                         .anyRequest().authenticated()
                 )
                 .cors(cors -> cors.disable()); // CORS yapılandırmasını etkinleştir

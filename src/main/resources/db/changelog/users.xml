@@ -31,6 +31,29 @@
                 <constraints  nullable="false"/>
             </column>
         </createTable>
+        <createTable tableName="daily_schedule">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="header" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="start_time" type="time">
+                <constraints nullable="false"/>
+            </column>
+            <column name="end_time" type="time">
+                <constraints nullable="true"/>
+            </column>
+            <column name="next_plan_duration" type="int">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
     </changeSet>
     <changeSet id="20231208-5" author="yigit">
 
